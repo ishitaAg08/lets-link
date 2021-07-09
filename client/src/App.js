@@ -14,7 +14,6 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 
 
 
-const socket = io.connect("/")
 function App() {
     const [ me, setMe ] = useState("")
     const [ stream, setStream ] = useState()
@@ -47,8 +46,10 @@ function App() {
         navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((stream) => {
             setStream(stream)
                 myVideo.current.srcObject = stream
+            const socket = io.connect("/")
+
         })
- 
+    
     socket.on("me", (id) => {
             setMe(id)
         })

@@ -2,6 +2,10 @@
   "name": "lets-link",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.14.13",
+    "node": "14.17.2"
+  }'
   "dependencies": {
     "@alan-ai/alan-sdk-web": "^1.8.27",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -24,8 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

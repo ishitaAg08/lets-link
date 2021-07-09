@@ -3,7 +3,6 @@ const express = require("express")
 const http = require("http")
 const app = express()
 const server = http.createServer(app)
-const path = require("path")
 const io = require("socket.io")(server)
 
 io.on("connection", (socket) => {
@@ -22,7 +21,8 @@ io.on("connection", (socket) => {
 	})
 })
 if(process.env.NODE_ENV == "production"){
-	app.use(express.static(path.join(__dirname,"client/public")));
+	app.use(express.static("client/public"));
+	const path = require("path");
 	/*app.get('*',(req,res)=>{
 		res.sendFile(path.join(__dirname,'./client/public/index.html'))
 	})*/

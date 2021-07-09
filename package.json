@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "PROD= true node server.js",
-    "postinstall": "cd ./client && yarn",
+    "postinstall": "cd ./client && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

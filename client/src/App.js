@@ -14,7 +14,7 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 
 
 
-const socket = io.connect('http://localhost:5000')
+const socket = io.connect("/")
 function App() {
     const [ me, setMe ] = useState("")
     const [ stream, setStream ] = useState()
